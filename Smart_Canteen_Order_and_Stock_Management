@@ -1,0 +1,24 @@
+
+stock = {"Idli": 20, "Dosa": 15, "Meals": 10}
+price = {"Idli": 20, "Dosa": 40, "Meals": 60}
+total = 0
+while True:
+    print("\n1.Order  2.View Stock  3.Exit")
+    choice = input("Choose: ")
+    if choice == "1":
+        item = input("Enter food item: ").title()
+        qty = int(input("Enter quantity: "))
+        if item in stock and 0 < qty <= stock[item]:
+            stock[item] -= qty
+            total += price[item] * qty
+            print("Order successful! Amount: ₹", price[item] * qty)
+        else:
+            print("Item unavailable or insufficient stock!")
+    elif choice == "2":
+        print("Available Stock:", stock)
+        print("Total Sales: ₹", total)
+    elif choice == "3":
+        print("Total Sales: ₹", total)
+        break
+    else:
+        print("Invalid choice!")
