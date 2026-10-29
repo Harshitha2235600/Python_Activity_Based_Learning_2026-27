@@ -1,0 +1,18 @@
+
+wasted = 0
+saved = 0
+while True:
+    print("\n1. Record Waste  2. Record Saved Food  3. Report  4. Exit")
+    choice = input("Choose: ")
+    if choice == "1":
+        wasted += float(input("Waste in kg: "))
+    elif choice == "2":
+        saved += float(input("Saved food in kg: "))
+    elif choice == "3":
+        print("Total Waste:", wasted, "kg")
+        print("Food Saved:", saved, "kg")
+    elif choice == "4":
+        break
+    else:
+        print("Invalid choice!")
+print("Food Waste Monitoring Ended.")
