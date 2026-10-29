@@ -1,0 +1,11 @@
+
+name = input("Student name: ")
+marks = list(map(float, input("Enter marks: ").split()))
+average = sum(marks) / len(marks)
+print("\n--- Academic Audit ---")
+print("Student:", name)
+print("Average Marks:", average)
+if min(marks) >= 40 and average >= 50:
+    print("Status: Eligible for Progression")
+else:
+    print("Status: Not Eligible for Progression")
