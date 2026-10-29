@@ -1,0 +1,13 @@
+
+marks = list(map(float, input("Enter marks: ").split(",")))
+print("Marks:", marks)
+print("Average:", sum(marks) / len(marks))
+print("Highest:", max(marks))
+print("Lowest:", min(marks))
+if len(marks) > 1:
+    if marks[-1] > marks[0]:
+        print("Trend: Improving")
+    elif marks[-1] < marks[0]:
+        print("Trend: Declining")
+    else:
+        print("Trend: Stable")
