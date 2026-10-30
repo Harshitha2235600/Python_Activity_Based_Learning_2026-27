@@ -1,1 +1,19 @@
-
+incidents = []
+while True:
+    print("\n1.Report  2.View  3.Exit")
+    choice = input("Choose: ")
+    if choice == "1":
+        issue = input("Enter issue: ")
+        location = input("Enter location: ")
+        priority = input("Priority (High/Medium/Low): ").title()
+        incidents.append((issue, location, priority))
+        print("Incident reported!")
+    elif choice == "2":
+        order = {"High": 1, "Medium": 2, "Low": 3}
+        for i in sorted(incidents, key=lambda x: order.get(x[2], 4)):
+            print("Issue:", i[0], "| Location:", i[1],
+                  "| Priority:", i[2])
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice!")
