@@ -1,19 +1,1 @@
-budget = float(input("Enter total budget: ₹"))
-expenses = []
-n = int(input("Number of expenses: "))
-for i in range(n):
-    name = input("Expense name: ")
-    amount = float(input("Amount: ₹"))
-    expenses.append((name, amount))
-total = sum(amount for name, amount in expenses)
-balance = budget - total
-print("\n--- Event Financial Report ---")
-for name, amount in expenses:
-    print(name, ": ₹", amount)
-print("Total Expenses: ₹", total)
-print("Remaining Balance: ₹", balance)
-if balance < 0:
-    print("Budget exceeded!")
-else:
-    print("Budget is within limit.")
 
