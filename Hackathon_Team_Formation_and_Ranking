@@ -1,7 +1,5 @@
-students = [
-    ("Asha", 85), ("Rahul", 90), ("Priya", 78),
-    ("Arun", 88), ("Neha", 92), ("Kiran", 80)
-]
+students =   ("Asha", 85), ("Rahul", 90), ("Priya", 78),
+             ("Arun", 88), ("Neha", 92), ("Kiran", 80)
 # Form teams of 2
 teams = [students[i:i+2] for i in range(0, len(students), 2)]
 # Rank teams by average score
